@@ -1,8 +1,3 @@
-# Define here the models for your spider middleware
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
 import undetected_chromedriver as uc
 from scrapy import signals
 from scrapy.http import HtmlResponse
@@ -52,8 +47,6 @@ class SeleniumUCMiddleware:
 
 
         if "category" in request.url:
-            self.driver.switch_to.default_content()
-            self.driver.save_screenshot("screenshot.png")
             item_class = self.driver.find_elements(by=By.XPATH, value="//div[contains(@class,'widget-search-result-container')]/div/div[1]")[0].get_attribute('class')
             total_items = self.driver.find_elements(by=By.XPATH, value=f"//div[contains(@class,'widget-search-result-container')]/div/div")
 
