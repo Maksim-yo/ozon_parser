@@ -11,6 +11,7 @@ BOT_NAME = "selenium_scraper"
 
 SPIDER_MODULES = ["selenium_scraper.spiders"]
 NEWSPIDER_MODULE = "selenium_scraper.spiders"
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -50,9 +51,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    "selenium_scraper.middlewares.SeleniumScraperDownloaderMiddleware": 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    "selenium_scraper.middlewares.SeleniumUCMiddleware": 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
