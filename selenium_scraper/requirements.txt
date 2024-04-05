@@ -1,0 +1,6 @@
+itemadapter==0.8.0
+pandas==2.2.1
+scrapy==2.11.1
+scrapy_selenium==0.0.7
+selenium==4.19.0
+undetected_chromedriver==3.5.5
