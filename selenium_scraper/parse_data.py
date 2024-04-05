@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 # Загрузим данные из файла, созданного scrapy
 data = pd.read_csv('phones.csv')
 
